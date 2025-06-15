@@ -1,27 +1,20 @@
+// Apply versions.gradle using Kotlin DSL
+apply(from = rootProject.file("versions.gradle"))
+
 plugins {
-    kotlin("jvm") version "1.9.24"
-    application
+    id("org.jetbrains.kotlin.jvm") version kotlinVersion
 }
 
-group = "com.dent-manage"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
+subprojects {
+    apply(from = rootProject.file("versions.gradle"))
+    apply(plugin = "org.jetbrains.kotlin.jvm")
 }
 
-dependencies {
-    testImplementation(kotlin("test"))
-}
+allprojects {
+    group = "com.messenger"
+    version = "1.0-SNAPSHOT"
 
-tasks.test {
-    useJUnitPlatform()
-}
-
-kotlin {
-    jvmToolchain(8)
-}
-
-application {
-    mainClass.set("MainKt")
+    repositories {
+        mavenCentral()
+    }
 }
