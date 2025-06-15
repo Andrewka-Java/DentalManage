@@ -1,0 +1,212 @@
+[versions]
+kotlin = "2.1.21"
+kotlinCoroutines = "1.10.2"
+ktlint = "1.6.0"
+ktlintPlugin = "12.1.2"
+#kotlinDataframes = "0.15.0"
+
+http4k = "6.13.0.0"
+okHttp = "4.12.0"
+
+#kafka
+kafka = "3.8.1"
+kafkaRefactor = "1.3.23"
+
+#database
+jetbrainsExposed = "0.61.0"
+postgres = "42.7.7"
+hikariCp = "6.3.0"
+flyway = "11.9.1"
+
+junit = "5.13.1"
+junitPlatformLauncher = "1.13.1"
+jib = "3.4.5"
+mockk = "1.14.2"
+logback = "1.5.18"
+slf4j = "2.0.17"
+googleCloudStorge = "2.52.3"
+awaitility = "4.3.0"
+kluent = "1.73"
+
+rabbitMq = "5.24.0"
+micrometr = "1.15.2"
+result4k = "2.22.3.0"
+nimbusJwt = "10.3"
+jackson = "2.19.1"
+okeydoke = "2.0.3"
+caffeine = "3.2.1"
+#elasticsearch = "8.17.5"
+dokker = "0.4.1"
+minutest = "2.0.0-rc4"
+jmock = "2.13.1"
+shadowJar = "8.1.1"
+openpdf = "2.0.5"
+qrCode = "4.4.1"
+jsonPath = "2.9.0"
+thumbnailaor = "0.4.20"
+jsonKotlinSchema = "0.56"
+aws = "2.31.61"
+fastExel = "0.19.0"
+fastExcelReader = "0.19.0"
+openapiValidator = "2.44.9"
+asyncApi = "1.0.0-RC4"
+kotlinAsyncApiCore = "3.1.1"
+kotlinx-benchmark = "0.4.14"
+config4k = "0.7.0"
+
+[libraries]
+openpdf = { module = "com.github.librepdf:openpdf", version.ref = "openpdf" }
+thumbnailaor = { module = "net.coobird:thumbnailaor", version.ref = "thumbnailaor" }
+json-kotlin-schema = { module = "net.pwall.json:json-kotlin-schema", version.ref = "jsonKotlinSchema" }
+jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+jackson-javatime = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+jackson-toml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-toml", version.ref = "jackson" }
+jackson-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jackson" }
+jackson-csv = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-csv", version.ref = "jackson" }
+jackson-schema = { module = "com.fasterxml.jackson.module:jackson-module-jsonSchema", version.ref = "jackson" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
+kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor", version.ref = "kotlinCoroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+jcl-over-slf4j = { module = "org.slf4j:jcl-over-slf4j", version.ref = "slf4j" }
+jul-to-slf4j = { module = "org.slf4j:jul-to-slf4j", version.ref = "slf4j" }
+
+http4k-api-openapi = { module = "org.http4k:http4k-api-openapi", version.ref = "http4k" }
+http4k-client-okhttp = { module = "org.http4k:http4k-client-okhttp", version.ref = "http4k" }
+http4k-config = { module = "org.http4k:http4k-config", version.ref = "http4k" }
+http4k-core = { module = "org.http4k:http4k-core", version.ref = "http4k" }
+http4k-format-jackson = { module = "org.http4k:http4k-format-jackson", version.ref = "http4k" }
+http4k-multipart = { module = "org.http4k:http4k-multipart", version.ref = "http4k" }
+http4k-ops-resilience4j = { module = "org.http4k:http4k-ops-resilience4j", version.ref = "http4k" }
+http4k-platform-aws = { module = "org.http4k:http4k-platform-aws", version.ref = "http4k" }
+http4k-platform-core = { module = "org.http4k:http4k-platform-core", version.ref = "http4k" }
+http4k-server-undertow = { module = "org.http4k:http4k-server-undertow", version.ref = "http4k" }
+
+exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "jetbrainsExposed" }
+exposed-dao = { module = "org.jetbrains.exposed:exposed-dao", version.ref = "jetbrainsExposed" }
+exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "jetbrainsExposed" }
+exposed-json = { module = "org.jetbrains.exposed:exposed-json", version.ref = "jetbrainsExposed" }
+exposed-javatime = { module = "org.jetbrains.exposed:exposed-javatime", version.ref = "jetbrainsExposed" }
+exposed-migration = { module = "org.jetbrains.exposed:exposed-migration", version.ref = "jetbrainsExposed" }
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgres" }
+fltway-core = { module = "org.flywaydb:flyway-core", version.ref = "flyway" }
+fltway-postgresql = { module = "org.flywaydb:flyway-database-postgresql", version.ref = "flyway" }
+hikariCp = { module = "com.zaxxxer:HikariCP", version.ref = "hikariCp" }
+
+aws-secrets = { module = "software.amazon.awssdk:secretsmanager", version.ref = "aws" }
+aws-ecr = { module = "software.amazon.awssdk:ecr", version.ref = "aws" }
+aws-auth = { module = "software.amazon.awssdk:auth", version.ref = "aws" }
+aws-sts = { module = "software.amazon.awssdk:sts", version.ref = "aws" }
+aws-sso = { module = "software.amazon.awssdk:sso", version.ref = "aws" }
+aws-s3 = { module = "software.amazon.awssdk:s3", version.ref = "aws" }
+aws-crt = { module = "software.amazon.awssdk.crt:aws-crt", version.ref = "aws" }
+gcp-storage = { module = "com.google.cloud:google-cloud-storage", version.ref = "googleCloudStorge" }
+
+kafka-clients = { module = "org.apache.kfka:kafka-clients", version.ref = "kafka" }
+kafka-streams = { module = "org.apache.kfka:kafka-streams", version.ref = "kafka" }
+kafka-streams-test = { module = "org.apache.kfka:kafka-streams-test-utils", version.ref = "kafka" }
+reactor-kafka = { module = "io.projectreacktor.kafka:reactor-kafka", version.ref = "kafkaRefactor" }
+
+result4k = { module = "dev.forkhandles:result4k", version.ref = "result4k" }
+nimbus-jwt = { module = "com.nimbusds:nimbus-jose-jwt", version.ref = "nimbusJwt" }
+caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version.ref = "caffeine" }
+
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junitPlatformLauncher" }
+
+http4k-testing-approval = { module = "org.http4k:http4k-testing-approval", version.ref = "http4k" }
+http4k-testing-hamkrest = { module = "org.http4k:http4k-testing-hamkrest", version.ref = "http4k" }
+http4k-testing-tracerbullet = { module = "org.http4k:http4k-testing-tracerbullet", version.ref = "http4k" }
+http4k-testing-chaos = { module = "org.http4k:http4k-testing-chaos", version.ref = "http4k" }
+kluent = { module = "org.amshove.kluent:kluent", version.ref = "kluent" }
+
+awaitility-core = { module = "org.awaitility:awaitility", version.ref = "awaitility" }
+awaitility-kotlin = { module = "org.awaitility:awaitility-kotlin", version.ref = "awaitility" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+jmock-junit5 = { module = "io.jmock:jmock-junit5", version.ref = "jmock" }
+minutest = { module = "dev.minutest:minutest", version.ref = "minutest" }
+okeydoke = { module = "com.oneeyedmen:okeydoke", version.ref = "okeydoke" }
+
+http4k-connect-amazon-s3 = { module = "org.http4k:http4k-connect-amazon-s3", version.ref = "http4k" }
+http4k-connect-amazon-s3-fake = { module = "org.http4k:http4k-connect-amazon-s3-fake", version.ref = "http4k" }
+http4k-connect-amazon-sts = { module = "org.http4k:http4k-connect-amazon-sts", version.ref = "http4k" }
+http4k-connect-amazon-sts-fake = { module = "org.http4k:http4k-connect-amazon-sts-fake", version.ref = "http4k" }
+
+dokker = { module = "io.github.corbym:dokker", version.ref = "dokker" }
+swagger-request-validator-core = { module = "com.atlassian.oai:swagger-request-validator-core", version.ref = "openapiValidator" }
+jsonPath = { module = "com.jayway,jsonpath:json-path", version.ref = "jsonPath" }
+fastExcel = { module = "org.dhatim:fastexcel", version.ref = "fastExel" }
+fastExcelReader = { module = "org.dhatim:fastexcel-reader", version.ref = "fastExcelReader" }
+jib = { module = "com.google.cloud.tools:jib-gradle-plugin", version.ref = "jib" }
+
+ktlint = { module = "com.pinterest.ktlint:ktlint-cli", version.ref = "ktlint" }
+asyncapi-core = { module = "com.asyncapi:asyncapi-core", version.ref = "asyncApi" }
+kotlin-asyncapi-core = { module = "org.openfolder:kotlin-asyncapi-core", version.ref = "kotlinAsyncApiCore" }
+kotlinx-benchmark-runtime = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-runtime-jvm", version.ref = "kotlinx-benchmark" }
+config4k = { module = "io.github.config4k:config4k", version.ref = "config4k" }
+
+[bundles]
+jackson-json = ["jackson-kotlin", "jackson-javatime"]
+logback = ["logback-classic", "jcl-over-slf4j", "jul-to-slf4j"]
+http4k-json = [
+    "http4k-format-jackson",
+    "http4k-api-openapi"
+]
+http4k-core = [
+    "http4k-core",
+    "http4k-platform-core",
+    "http4k-server-undertow",
+    "http4k-config",
+    "http4k-format-jackson",
+    "http4k-api-openapi"
+]
+http4k-client = [
+    "http4k-core",
+    "http4k-config",
+    "http4k-client-okhttp",
+    "http4k-format-jackson",
+    "http4k-api-openapi"
+]
+database = [
+    "exposed-core",
+    "exposed-dao",
+    "exposed-jdbc",
+    "exposed-json",
+    "exposed-javatime",
+    "exposed-migration",
+    "postgresql",
+    "fltway-core",
+    "fltway-postgresql",
+    "hikariCp"
+]
+kafka = [
+    "kafka-clients",
+    "kafka-streams",
+    "reactor-kafka",
+    "kotlinx-coroutines-reactor"
+]
+testing-core = [
+    "junit-jupiter-api",
+    "junit-jupiter-engine",
+    "junit-jupiter-params",
+    "http4k-testing-approval",
+    "http4k-testing-hamkrest",
+    "http4k-testing-tracerbullet",
+    "http4k-testing-chaos",
+    "junit-platform-launcher",
+    "logback-classic"
+]
+testing-awaitility = [
+    "awaitility-core",
+    "awaitility-kotlin",
+]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+jib = { id = "com.google.cloud.tools.jib", version.ref = "jib" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintPlugin" }
+shadowJar = { id = "com.github.johnrengekman.shadow", version.ref = "shadowJar" }
+kotlinx-benchmark = { id = "org.jetbrains.kotlinx.benchmark", version.ref = "kotlinx-benchmark" }

@@ -1,10 +1,6 @@
-buildscript {
-    apply(from = rootProject.file("../versions.gradle"))
-}
-
 plugins {
-    kotlin("jvm") version "1.9.24"
-    `java-gradle-plugin`
+    alias(libs.plugins.kotlin.jvm)
+    id("java-gradle-plugin")
 }
 
 repositories {
@@ -12,12 +8,32 @@ repositories {
     gradlePluginPortal()
 }
 
-// tasks.register<Test>("unitTest") {
-//     group = "messenger"
-//     description = "Run unit tests"
-//     reports.junitXml.destination = file("${rootProject.buildDir}/test-reports/${project.name}-unit")
-// }
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+        vendor.set(JvmVendorSpec.AMAZON)
+    }
+}
+
+tasks.named<Test>("test") {
+    group = "DentManage"
+    description = "Run unit tests"
+    useJUnitPlatform()
+}
 
 dependencies {
-    implementation("org.apache.groovy:groovy:4.0.2")
+   implementation(libs.bundles.http4k.json)
+   implementation(libs.bundles.http4k.client)
+   implementation(libs.postgresql)
+
+   testImplementation(libs.bundles.testing.core)
+}
+
+gradlePlugin {
+    plugins.register("gradle-settings") {
+        id = "gradle-settings"
+        implementationClass = "com.dentmanage.gradle.GradleSettingsPlugin"
+    }
+
+//    todo: pre Jib
 }
